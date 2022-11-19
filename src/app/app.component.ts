@@ -1,23 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { Vehicle } from './vehicle';
+import { VEHICLES } from './mock-vehicle-list';
 
 @Component({
   selector: 'app-root',
-  template: `<h1>Welcome to {{ vehicleList[0] }}!</h1>`,
-  styles: []
+  templateUrl: 'app.component.html'
 })
 export class AppComponent implements OnInit {
-  vehicleList = ['Twizy E-Tech 100% Electric', 'Twingo', 'Zoe E-Tech 100% Electric'];
+  vehicleList: Vehicle[] = VEHICLES;
 
   ngOnInit(): void {
     console.table(this.vehicleList);
-    this.selectTexture('TWINGO');
+    this.selectVehicle(this.vehicleList[1]);
   }
 
   /**
-   * Permet de sélectionner un asset.
-   * @param vehicleName Nom de l'asset.
+   * Permet de sélectionner un véhicule.
+   * @param vehicle Véhicule.
    */
-  selectTexture(vehicleName: string) {
-    console.log(`Vous avez cliqué sur le pokémon ${vehicleName}`);
+  selectVehicle(vehicle: Vehicle) {
+    console.log(`Vous avez cliqué sur le véhicule ${vehicle.name}`);
   }
 }

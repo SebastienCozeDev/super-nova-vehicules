@@ -2,7 +2,7 @@ export class Vehicle {
     id: number;
     price: number;
     name: string;
-    description: string;
+    shortDescription: string;
     picture: string;
     types: Array<string>;
     release: Date;

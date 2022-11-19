@@ -1,0 +1,58 @@
+import { Vehicle } from "./vehicle";
+
+export const VEHICLES: Vehicle[] = [
+    {
+        id: 1,
+        price: 11600,
+        name: 'Twizy E-Tech 100% Electric',
+        description: 'TWIZY E-TECH 100% ELECTRIC Intens Noir 45 Achat Intégral',
+        picture: 'https://www.renault.fr/agg/vn/unique/ONE_DACIA_PP_LARGE_DENSITY1/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Ffr.co.rplug.renault.com%2Fproduct%2Fmodel%2FTWZ%3Bck%3DVP%2Ftwizy-e-tech-electrique%2Fc%2FA-ENS_0MDL2P1SERIELIM3_-TEGNE',
+        types: ['électrique'],
+        release: new Date(),
+    },
+    {
+        id: 2,
+        price: 15750,
+        name: 'Twingo',
+        description: 'TWINGO equilibre SCe 65',
+        picture: 'https://www.renault.fr/agg/vn/unique/ONE_DACIA_PP_LARGE_DENSITY1/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Ffr.co.rplug.renault.com%2Fproduct%2Fmodel%2F2W3%2Ftwingo%2Fc%2FA-ENS_0MDL2P1SERIELIM2_-OVRPP',
+        types: ['électrique', 'essence'],
+        release: new Date(),
+    },
+    {
+        id: 3,
+        price: 33700,
+        name: 'Zoe E-Tech 100% Electric',
+        description: 'ZOE E-TECH 100% ELECTRIC equilibre R110 -MY22',
+        picture: 'https://www.renault.fr/agg/vn/unique/ONE_DACIA_PP_LARGE_DENSITY1/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Ffr.co.rplug.renault.com%2Fproduct%2Fmodel%2FZOE%3Bck%3DVP%2Fzoe-e-tech-electrique%2Fc%2FA-ENS_0MDL3P1SERIELIM3_-TERRE',
+        types: ['électrique'],
+        release: new Date(),
+    },
+    {
+        id: 4,
+        price: 17100,
+        name: 'Clio',
+        description: 'CLIO authentic SCe 65',
+        picture: 'https://www.renault.fr/agg/vn/unique/ONE_DACIA_PP_LARGE_DENSITY1/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Ffr.co.rplug.renault.com%2Fproduct%2Fmodel%2FCL5%3Bck%3DVP%2Fclio%2Fc%2FA-ENS_0MDL2PSP1SERIESPE1_-TERQH',
+        types: ['full hybrid', 'essence', 'diessel'],
+        release: new Date(),
+    },
+    {
+        id: 5,
+        price: 23400,
+        name: 'Captur',
+        description: 'CAPTUR equilibre TCe 90',
+        picture: 'https://www.renault.fr/agg/vn/unique/ONE_DACIA_PP_LARGE_DENSITY1/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Ffr.co.rplug.renault.com%2Fproduct%2Fmodel%2FCP1%2Fcaptur%2Fc%2FA-ENS_0MDL2PSP1SERIELIM2_-BIXPA',
+        types: ['full hybrid', 'plug-in hybrid', 'mild hybrid', 'essence'],
+        release: new Date(),
+    },
+    {
+        id: 6,
+        price: 23400,
+        name: 'Megane E-Tech 100% Electric',
+        description: 'MEGANE E-TECH 100% ELECTRIC equilibre EV40 130ch boost charge',
+        picture: 'https://www.renault.fr/agg/vn/unique/ONE_DACIA_PP_LARGE_DENSITY1/r_brandSite_carPicker_1.png?uri=https%3A%2F%2Ffr.co.rplug.renault.com%2Fproduct%2Fmodel%2FZO1%2Fmegane-e-tech-100-electrique%2Fc%2FA-ENS_0MDL2P1SERIELIM4_-BIYWU',
+        types: ['électrique'],
+        release: new Date(),
+    },
+];

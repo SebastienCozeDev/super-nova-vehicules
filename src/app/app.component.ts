@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
-  title = 'ng-pokemon-app';
+  title = 'boutique de textures';
 }

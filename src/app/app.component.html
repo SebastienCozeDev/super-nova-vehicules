@@ -1,39 +1,19 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperNova France</title>
-</head>
-<body>
-    <h1>Entrez dans l'univers des véhicules SuperNova</h1>
-    <section>
-        <h2>Nos véhicules</h2>
-        <article>
-            <img src="{{ vehicleList[0].picture }}" alt="" width="800">
-            <h3>{{ vehicleList[0].name }}</h3>
-            <p>A partir de {{ vehicleList[0].price }}€</p>
-            <i>{{ vehicleList[0].shortDescription }}</i>
+<section class="container" style="font-family: 'NouvelR, sans-serif';">
+    <h2 class="title" style="text-align: center; color: #000; text-transform: uppercase; font-size: 1.7em; margin-top: 4rem; margin-bottom: 4rem;">Nos véhicules</h2>
+    <div class="columns">
+        <article *ngFor="let vehicule of vehicleList" class="column">
+            <div class="card" style="box-shadow: none; margin: 2rem;">
+                <div class="card-image" style="border-radius: 0; margin: 1rem;">
+                    <figure class="image">
+                        <img [src]="vehicule.picture" alt="" style="border-radius: 0;">
+                      </figure>
+                </div>
+                <div class="card-content">
+                    <h3 style="font-weight: bold; text-transform: uppercase; font-size: 1.2em;">{{ vehicule.name }}</h3>
+                    <p style="text-transform: lowercase; font-size: 0.9em;">prix à partir de {{ vehicule.price }}€</p>
+                    <i style="font-size: 0.7em;">{{ vehicule.shortDescription }}</i>
+                </div>
+            </div>
         </article>
-        <article>
-            <img src="{{ vehicleList[1].picture }}" alt="" width="800">
-            <h3>{{ vehicleList[1].name }}</h3>
-            <p>A partir de {{ vehicleList[1].price }}€</p>
-            <i>{{ vehicleList[1].shortDescription }}</i>
-        </article>
-        <article>
-            <img src="{{ vehicleList[2].picture }}" alt="" width="800">
-            <h3>{{ vehicleList[2].name }}</h3>
-            <p>A partir de {{ vehicleList[3].price }}€</p>
-            <i>{{ vehicleList[3].shortDescription }}</i>
-        </article>
-        <article>
-            <img src="{{ vehicleList[3].picture }}" alt="" width="800">
-            <h3>{{ vehicleList[3].name }}</h3>
-            <p>A partir de {{ vehicleList[3].price }}€</p>
-            <i>{{ vehicleList[3].shortDescription }}</i>
-        </article>
-    </section>
-</body>
-</html>
+    </div>
+</section>

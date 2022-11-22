@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appBorderCard]'
@@ -6,21 +6,39 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 export class BorderCardDirective {
 
   /**
+   * Couleur initiale de la directive d'attribut.
+   */
+  private initialColor: string = '#f5f5f5';
+
+  /**
+   * Couleur par défault lorsque l'utilisateur passe le curseur sur l'élément.
+   */
+  private defaultColor: string = '#009688';
+
+  /**
+   * Hauteur par default de la card. Celle-ci est exprimé en pourcentage.
+   */
+  private defaultHeight: number = 100;
+
+  /**
    * Constructeur de l'objet BorderCardDirective.
    * 
    * @param el Référence du DOM.
    */
   constructor(private el: ElementRef) {
-    this.setHeight(100);
-    this.setBorder(`#f5f5f5`);
+    this.setHeight(this.defaultHeight);
+    this.setBorder(this.initialColor);
   }
 
+  @Input('appBorderCard') borderColor: string; // alias
+  //@Input() appBorderCard: string; // sans alias
+
   @HostListener('mouseenter') onMouseEnter() {
-    this.setBorder('#009688');
+    this.setBorder(this.borderColor || this.defaultColor);
   }
 
   @HostListener('mouseleave') onMouseLeave() {
-    this.setBorder('#f5f5f5');
+    this.setBorder(this.initialColor);
   }
 
   /**

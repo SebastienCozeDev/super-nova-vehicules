@@ -11,7 +11,7 @@ export class BorderCardDirective {
    * @param el Référence du DOM.
    */
   constructor(private el: ElementRef) {
-    this.setHeight(180);
+    this.setHeight(100);
     this.setBorder(`#f5f5f5`);
   }
 
@@ -19,7 +19,7 @@ export class BorderCardDirective {
     this.setBorder('#009688');
   }
 
-  @HostListener('mouseLeave') onMouseLeave() {
+  @HostListener('mouseleave') onMouseLeave() {
     this.setBorder('#f5f5f5');
   }
 
@@ -29,7 +29,7 @@ export class BorderCardDirective {
    * @param height Nouvelle hauteur.
    */
   setHeight(height: number) {
-    this.el.nativeElement.style.height = `${height}px`;
+    this.el.nativeElement.style.height = `${height}%`;
   }
 
   /**

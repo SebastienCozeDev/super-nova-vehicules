@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
 
   /**
    * Permet de sélectionner un véhicule.
-   * @param vehicle Véhicule.
+   * @param vehicleId Identifiant du véhicule.
    */
   selectVehicle(vehicleId: String) {
     const vehicle: Vehicle|undefined = this.vehicleList.find(vehicle => vehicle.id == +vehicleId);

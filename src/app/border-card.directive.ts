@@ -18,7 +18,7 @@ export class BorderCardDirective {
   /**
    * Hauteur par default de la card. Celle-ci est exprimé en pourcentage.
    */
-  private defaultHeight: number = 25;
+  private defaultHeight: number = 29;
 
   /**
    * Constructeur de l'objet BorderCardDirective.

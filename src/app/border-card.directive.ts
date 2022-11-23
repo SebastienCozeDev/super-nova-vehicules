@@ -18,7 +18,7 @@ export class BorderCardDirective {
   /**
    * Hauteur par default de la card. Celle-ci est exprimé en pourcentage.
    */
-  private defaultHeight: number = 100;
+  private defaultHeight: number = 25;
 
   /**
    * Constructeur de l'objet BorderCardDirective.
@@ -47,7 +47,7 @@ export class BorderCardDirective {
    * @param height Nouvelle hauteur.
    */
   setHeight(height: number) {
-    this.el.nativeElement.style.height = `${height}%`;
+    this.el.nativeElement.style.height = `${height}em`;
   }
 
   /**

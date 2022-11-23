@@ -7,7 +7,15 @@ import { VEHICLES } from './mock-vehicle-list';
   templateUrl: 'app.component.html'
 })
 export class AppComponent implements OnInit {
+
+  /**
+   * Liste des véhicules.
+   */
   vehicleList: Vehicle[] = VEHICLES;
+
+  /**
+   * Véhicule sélectionné par l'utilisateur.
+   */
   vehicleSelected: Vehicle|undefined;
 
   ngOnInit(): void {
@@ -27,4 +35,5 @@ export class AppComponent implements OnInit {
     }
     this.vehicleSelected = vehicle;
   }
+
 }

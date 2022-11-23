@@ -8,9 +8,15 @@
                         <img class="image" [src]="vehicule.picture" alt="" style="border-radius: 0; max-width: 100%; max-height: 100%">
                     </div>
                     <div class="card-content">
-                        <h3 style="font-weight: bold; text-transform: uppercase; font-size: 1.2em;">{{ vehicule.name }}</h3>
-                        <p style="text-transform: lowercase; font-size: 0.9em;">prix à partir de {{ vehicule.price }}€</p>
-                        <i style="font-size: 0.7em;">{{ vehicule.shortDescription }}</i>
+                        <p>
+                            <span *ngFor="let type of vehicule.types" class="tag" style="margin-left: 0.3rem; margin-right: 0.3rem; margin-bottom: 0.6rem;">
+                                {{ type }}
+                            </span>
+                        </p>
+                        <h3 style="font-weight: bold; text-transform: uppercase; font-size: 1.2em;">{{ vehicule.name | uppercase }}</h3>
+                        <p style="text-transform: lowercase; font-size: 0.9em;">prix à partir de {{ vehicule.price.toString()| lowercase }}€</p>
+                        <p style="text-transform: lowercase; font-size: 0.5em;">Sortie la première fois le {{ vehicule.release | date:"dd MMMM YYYY" }}</p>
+                        <i style="font-size: 0.7em; line-height: 0.5em;">{{ vehicule.shortDescription }}</i>
                     </div>
                 </div>
             </div>

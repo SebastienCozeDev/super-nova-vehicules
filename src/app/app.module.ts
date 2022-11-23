@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BorderCardDirective } from './border-card.directive';
 import { VehicleTypeColorPipe } from './vehicle-type-color.pipe';
+import { ListVehiculeComponent } from './list-vehicule/list-vehicule.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BorderCardDirective,
-    VehicleTypeColorPipe
+    VehicleTypeColorPipe,
+    ListVehiculeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,23 @@
-<p>list-vehicles works!</p>
+<section class="container" style="font-family: 'NouvelR, sans-serif';">
+    <h2 class="title" style="text-align: center; color: #000; text-transform: uppercase; font-size: 1.7em; margin-top: 4rem; margin-bottom: 4rem;">Nos véhicules</h2>
+    <div class="row">
+        <article *ngFor="let vehicule of vehicleList" class="col m4 s14">
+            <div>
+                <div class="card vertical" style="box-shadow: none; margin: 2rem;" appBorderCard="#000">
+                    <div class="card-image" style="border-radius: 0; margin: 1rem;">
+                        <img class="image" [src]="vehicule.picture" alt="" style="border-radius: 0; max-width: 100%; max-height: 100%">
+                    </div>
+                    <div class="card-content">
+                        <span *ngFor="let type of vehicule.types" class="tag {{ type | vehicleTypeColor }}" style="margin-left: 0.3rem; margin-right: 0.3rem; margin-bottom: 0.6rem; color: #fff;">
+                            {{ type }}
+                        </span>
+                        <h3 style="font-weight: bold; text-transform: uppercase; font-size: 1.2em;">{{ vehicule.name | uppercase }}</h3>
+                        <p style="text-transform: lowercase; font-size: 0.9em;">prix à partir de {{ vehicule.price.toString()| lowercase }}€</p>
+                        <p style="text-transform: lowercase; font-size: 0.5em;">Sortie la première fois le {{ vehicule.release | date:"dd MMMM YYYY" }}</p>
+                        <i style="font-size: 0.7em; line-height: 0.5em;">{{ vehicule.shortDescription }}</i>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>

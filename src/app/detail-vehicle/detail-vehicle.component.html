@@ -15,14 +15,14 @@
                             </tr>
                             <tr>
                                 <td>À partir de </td>
-                                <td><strong>{{ vehicle.price }}</strong></td>
+                                <td><strong>{{ vehicle.price }} €</strong></td>
                             </tr>
                             <tr>
                                 <td>Description</td>
                                 <td><strong>{{ vehicle.shortDescription }}</strong></td>
                             </tr>
                             <tr>
-                                <td>Types</td>
+                                <td>Disponible en </td>
                                 <td>
                                     <span *ngFor="let type of vehicle.types" class="{{ type | vehicleTypeColor }}">
                                         {{ type }}
